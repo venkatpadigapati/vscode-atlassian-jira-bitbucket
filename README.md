@@ -92,3 +92,2098 @@ those contributing as an individual.
 
 -   [CLA for corporate contributors](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e1c17c66-ca4d-4aab-a953-2c231af4a20b)
 -   [CLA for individuals](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=3f94fbdc-2fbe-46ac-b14c-5d152700ae5d)
+
+
+
+
+
+
+
+
+
+
+
+
+
+case 0:
+              //_context9.next = 2;
+              //return this.getFromJira("issue/createmeta/".concat(projectKey, "/issuetypes"));
+            //case 2:
+              //res = _context9.sent;
+              //return _context9.abrupt("return", (0, _createMeta.readIssueCreateMetadata)(res));
+              res = {
+                "expand": "projects",
+                "projects": [
+                  {
+                    "expand": "issuetypes",
+                    "self": "https://venkat-padigapati.atlassian.net/rest/api/2/project/10001",
+                    "id": "10001",
+                    "key": "DEMO",
+                    "name": "Demo service project",
+                    "avatarUrls": {
+                      "48x48": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403",
+                      "24x24": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=small",
+                      "16x16": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=xsmall",
+                      "32x32": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=medium"
+                    },
+                    "issuetypes": [
+                      {
+                        "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10002",
+                        "id": "10002",
+                        "description": "An IT problem or question.",
+                        "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10565?size=medium",
+                        "name": "IT Help",
+                        "untranslatedName": "IT Help",
+                        "subtask": false,
+                        "hierarchyLevel": 0,
+                        "expand": "fields",
+                        "fields": {
+                          "summary": {
+                            "required": true,
+                            "schema": {
+                              "type": "string",
+                              "system": "summary"
+                            },
+                            "name": "Summary",
+                            "key": "summary",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuetype": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuetype",
+                              "system": "issuetype"
+                            },
+                            "name": "Issue Type",
+                            "key": "issuetype",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10002",
+                                "id": "10002",
+                                "description": "An IT problem or question.",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10565?size=medium",
+                                "name": "IT Help",
+                                "subtask": false,
+                                "avatarId": 10565,
+                                "hierarchyLevel": 0
+                              }
+                            ]
+                          },
+                          "parent": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuelink",
+                              "system": "parent"
+                            },
+                            "name": "Parent",
+                            "key": "parent",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "components": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "component",
+                              "system": "components"
+                            },
+                            "name": "Components",
+                            "key": "components",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10001",
+                                "id": "10001",
+                                "name": "Intranet",
+                                "description": "Issues related to the intranet. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10000",
+                                "id": "10000",
+                                "name": "Jira",
+                                "description": "Issues related to Jira. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10002",
+                                "id": "10002",
+                                "name": "Public website",
+                                "description": "Issues related to the public website. Created by Jira Service Management."
+                              }
+                            ]
+                          },
+                          "description": {
+                            "required": false,
+                            "schema": {
+                              "type": "string",
+                              "system": "description"
+                            },
+                            "name": "Description",
+                            "key": "description",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "project": {
+                            "required": true,
+                            "schema": {
+                              "type": "project",
+                              "system": "project"
+                            },
+                            "name": "Project",
+                            "key": "project",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/project/10001",
+                                "id": "10001",
+                                "key": "DEMO",
+                                "name": "Demo service project",
+                                "projectTypeKey": "service_desk",
+                                "simplified": false,
+                                "avatarUrls": {
+                                  "48x48": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403",
+                                  "24x24": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=small",
+                                  "16x16": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=xsmall",
+                                  "32x32": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=medium"
+                                }
+                              }
+                            ]
+                          },
+                          "reporter": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "reporter"
+                            },
+                            "name": "Reporter",
+                            "key": "reporter",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/search?query=",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10010": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-customerrequesttype",
+                              "custom": "com.atlassian.servicedesk:vp-origin",
+                              "customId": 10010
+                            },
+                            "name": "Request Type",
+                            "key": "customfield_10010",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10032": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.servicedesk:sd-request-participants",
+                              "customId": 10032
+                            },
+                            "name": "Request participants",
+                            "key": "customfield_10032",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/servicedesk/sd-user-search/participants?issueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10033": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-feedback",
+                              "custom": "com.atlassian.servicedesk:sd-request-feedback",
+                              "customId": 10033
+                            },
+                            "name": "Satisfaction",
+                            "key": "customfield_10033",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "priority": {
+                            "required": false,
+                            "schema": {
+                              "type": "priority",
+                              "system": "priority"
+                            },
+                            "name": "Priority",
+                            "key": "priority",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/1",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/highest.svg",
+                                "name": "Highest",
+                                "id": "1"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/2",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/high.svg",
+                                "name": "High",
+                                "id": "2"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                                "name": "Medium",
+                                "id": "3"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/4",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/low.svg",
+                                "name": "Low",
+                                "id": "4"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/5",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/lowest.svg",
+                                "name": "Lowest",
+                                "id": "5"
+                              }
+                            ],
+                            "defaultValue": {
+                              "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                              "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                              "name": "Medium",
+                              "id": "3"
+                            }
+                          },
+                          "customfield_10002": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "sd-customerorganization",
+                              "custom": "com.atlassian.servicedesk:sd-customer-organizations",
+                              "customId": 10002
+                            },
+                            "name": "Organizations",
+                            "key": "customfield_10002",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/organisations/project/10001/search?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10003": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+                              "customId": 10003
+                            },
+                            "name": "Approvers",
+                            "key": "customfield_10003",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_10003&showAvatar=true&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "labels": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "string",
+                              "system": "labels"
+                            },
+                            "name": "Labels",
+                            "key": "labels",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/labels/suggest?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10037": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-request-lang",
+                              "custom": "com.atlassian.servicedesk.servicedesk-lingo-integration-plugin:sd-request-language",
+                              "customId": 10037
+                            },
+                            "name": "Request language",
+                            "key": "customfield_10037",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "languageCode": "en",
+                                "displayName": "English"
+                              }
+                            ]
+                          },
+                          "timetracking": {
+                            "required": false,
+                            "schema": {
+                              "type": "timetracking",
+                              "system": "timetracking"
+                            },
+                            "name": "Time tracking",
+                            "key": "timetracking",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "edit"
+                            ]
+                          },
+                          "customfield_10038": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "group",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multigrouppicker",
+                              "customId": 10038
+                            },
+                            "name": "Approver groups",
+                            "key": "customfield_10038",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "attachment": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "attachment",
+                              "system": "attachment"
+                            },
+                            "name": "Attachment",
+                            "key": "attachment",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "copy"
+                            ]
+                          },
+                          "duedate": {
+                            "required": false,
+                            "schema": {
+                              "type": "date",
+                              "system": "duedate"
+                            },
+                            "name": "Due date",
+                            "key": "duedate",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuelinks": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "issuelinks",
+                              "system": "issuelinks"
+                            },
+                            "name": "Linked Issues",
+                            "key": "issuelinks",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "copy"
+                            ]
+                          },
+                          "assignee": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "assignee"
+                            },
+                            "name": "Assignee",
+                            "key": "assignee",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/assignable/search?project=DEMO&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10007",
+                        "id": "10007",
+                        "description": "A task that needs to be done.",
+                        "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10570?size=medium",
+                        "name": "Task",
+                        "untranslatedName": "Task",
+                        "subtask": false,
+                        "hierarchyLevel": 0,
+                        "expand": "fields",
+                        "fields": {
+                          "summary": {
+                            "required": true,
+                            "schema": {
+                              "type": "string",
+                              "system": "summary"
+                            },
+                            "name": "Summary",
+                            "key": "summary",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuetype": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuetype",
+                              "system": "issuetype"
+                            },
+                            "name": "Issue Type",
+                            "key": "issuetype",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10007",
+                                "id": "10007",
+                                "description": "A task that needs to be done.",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10570?size=medium",
+                                "name": "Task",
+                                "subtask": false,
+                                "avatarId": 10570,
+                                "hierarchyLevel": 0
+                              }
+                            ]
+                          },
+                          "parent": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuelink",
+                              "system": "parent"
+                            },
+                            "name": "Parent",
+                            "key": "parent",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "components": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "component",
+                              "system": "components"
+                            },
+                            "name": "Components",
+                            "key": "components",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10001",
+                                "id": "10001",
+                                "name": "Intranet",
+                                "description": "Issues related to the intranet. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10000",
+                                "id": "10000",
+                                "name": "Jira",
+                                "description": "Issues related to Jira. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10002",
+                                "id": "10002",
+                                "name": "Public website",
+                                "description": "Issues related to the public website. Created by Jira Service Management."
+                              }
+                            ]
+                          },
+                          "description": {
+                            "required": false,
+                            "schema": {
+                              "type": "string",
+                              "system": "description"
+                            },
+                            "name": "Description",
+                            "key": "description",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "project": {
+                            "required": true,
+                            "schema": {
+                              "type": "project",
+                              "system": "project"
+                            },
+                            "name": "Project",
+                            "key": "project",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/project/10001",
+                                "id": "10001",
+                                "key": "DEMO",
+                                "name": "Demo service project",
+                                "projectTypeKey": "service_desk",
+                                "simplified": false,
+                                "avatarUrls": {
+                                  "48x48": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403",
+                                  "24x24": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=small",
+                                  "16x16": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=xsmall",
+                                  "32x32": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=medium"
+                                }
+                              }
+                            ]
+                          },
+                          "reporter": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "reporter"
+                            },
+                            "name": "Reporter",
+                            "key": "reporter",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/search?query=",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10010": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-customerrequesttype",
+                              "custom": "com.atlassian.servicedesk:vp-origin",
+                              "customId": 10010
+                            },
+                            "name": "Request Type",
+                            "key": "customfield_10010",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10032": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.servicedesk:sd-request-participants",
+                              "customId": 10032
+                            },
+                            "name": "Request participants",
+                            "key": "customfield_10032",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/servicedesk/sd-user-search/participants?issueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10033": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-feedback",
+                              "custom": "com.atlassian.servicedesk:sd-request-feedback",
+                              "customId": 10033
+                            },
+                            "name": "Satisfaction",
+                            "key": "customfield_10033",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "priority": {
+                            "required": false,
+                            "schema": {
+                              "type": "priority",
+                              "system": "priority"
+                            },
+                            "name": "Priority",
+                            "key": "priority",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/1",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/highest.svg",
+                                "name": "Highest",
+                                "id": "1"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/2",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/high.svg",
+                                "name": "High",
+                                "id": "2"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                                "name": "Medium",
+                                "id": "3"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/4",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/low.svg",
+                                "name": "Low",
+                                "id": "4"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/5",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/lowest.svg",
+                                "name": "Lowest",
+                                "id": "5"
+                              }
+                            ],
+                            "defaultValue": {
+                              "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                              "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                              "name": "Medium",
+                              "id": "3"
+                            }
+                          },
+                          "customfield_10002": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "sd-customerorganization",
+                              "custom": "com.atlassian.servicedesk:sd-customer-organizations",
+                              "customId": 10002
+                            },
+                            "name": "Organizations",
+                            "key": "customfield_10002",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/organisations/project/10001/search?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10003": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+                              "customId": 10003
+                            },
+                            "name": "Approvers",
+                            "key": "customfield_10003",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_10003&showAvatar=true&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "labels": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "string",
+                              "system": "labels"
+                            },
+                            "name": "Labels",
+                            "key": "labels",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/labels/suggest?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10037": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-request-lang",
+                              "custom": "com.atlassian.servicedesk.servicedesk-lingo-integration-plugin:sd-request-language",
+                              "customId": 10037
+                            },
+                            "name": "Request language",
+                            "key": "customfield_10037",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "languageCode": "en",
+                                "displayName": "English"
+                              }
+                            ]
+                          },
+                          "timetracking": {
+                            "required": false,
+                            "schema": {
+                              "type": "timetracking",
+                              "system": "timetracking"
+                            },
+                            "name": "Time tracking",
+                            "key": "timetracking",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "edit"
+                            ]
+                          },
+                          "customfield_10038": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "group",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multigrouppicker",
+                              "customId": 10038
+                            },
+                            "name": "Approver groups",
+                            "key": "customfield_10038",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "attachment": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "attachment",
+                              "system": "attachment"
+                            },
+                            "name": "Attachment",
+                            "key": "attachment",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "copy"
+                            ]
+                          },
+                          "duedate": {
+                            "required": false,
+                            "schema": {
+                              "type": "date",
+                              "system": "duedate"
+                            },
+                            "name": "Due date",
+                            "key": "duedate",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuelinks": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "issuelinks",
+                              "system": "issuelinks"
+                            },
+                            "name": "Linked Issues",
+                            "key": "issuelinks",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "copy"
+                            ]
+                          },
+                          "assignee": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "assignee"
+                            },
+                            "name": "Assignee",
+                            "key": "assignee",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/assignable/search?project=DEMO&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10004",
+                        "id": "10004",
+                        "description": "A request that follows ITSM workflows.",
+                        "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10567?size=medium",
+                        "name": "Service Request",
+                        "untranslatedName": "Service Request",
+                        "subtask": false,
+                        "hierarchyLevel": 0,
+                        "expand": "fields",
+                        "fields": {
+                          "summary": {
+                            "required": true,
+                            "schema": {
+                              "type": "string",
+                              "system": "summary"
+                            },
+                            "name": "Summary",
+                            "key": "summary",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuetype": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuetype",
+                              "system": "issuetype"
+                            },
+                            "name": "Issue Type",
+                            "key": "issuetype",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10004",
+                                "id": "10004",
+                                "description": "A request that follows ITSM workflows.",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10567?size=medium",
+                                "name": "Service Request",
+                                "subtask": false,
+                                "avatarId": 10567,
+                                "hierarchyLevel": 0
+                              }
+                            ]
+                          },
+                          "parent": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuelink",
+                              "system": "parent"
+                            },
+                            "name": "Parent",
+                            "key": "parent",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "components": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "component",
+                              "system": "components"
+                            },
+                            "name": "Components",
+                            "key": "components",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10001",
+                                "id": "10001",
+                                "name": "Intranet",
+                                "description": "Issues related to the intranet. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10000",
+                                "id": "10000",
+                                "name": "Jira",
+                                "description": "Issues related to Jira. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10002",
+                                "id": "10002",
+                                "name": "Public website",
+                                "description": "Issues related to the public website. Created by Jira Service Management."
+                              }
+                            ]
+                          },
+                          "description": {
+                            "required": false,
+                            "schema": {
+                              "type": "string",
+                              "system": "description"
+                            },
+                            "name": "Description",
+                            "key": "description",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "project": {
+                            "required": true,
+                            "schema": {
+                              "type": "project",
+                              "system": "project"
+                            },
+                            "name": "Project",
+                            "key": "project",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/project/10001",
+                                "id": "10001",
+                                "key": "DEMO",
+                                "name": "Demo service project",
+                                "projectTypeKey": "service_desk",
+                                "simplified": false,
+                                "avatarUrls": {
+                                  "48x48": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403",
+                                  "24x24": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=small",
+                                  "16x16": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=xsmall",
+                                  "32x32": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=medium"
+                                }
+                              }
+                            ]
+                          },
+                          "reporter": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "reporter"
+                            },
+                            "name": "Reporter",
+                            "key": "reporter",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/search?query=",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10010": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-customerrequesttype",
+                              "custom": "com.atlassian.servicedesk:vp-origin",
+                              "customId": 10010
+                            },
+                            "name": "Request Type",
+                            "key": "customfield_10010",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10032": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.servicedesk:sd-request-participants",
+                              "customId": 10032
+                            },
+                            "name": "Request participants",
+                            "key": "customfield_10032",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/servicedesk/sd-user-search/participants?issueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10033": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-feedback",
+                              "custom": "com.atlassian.servicedesk:sd-request-feedback",
+                              "customId": 10033
+                            },
+                            "name": "Satisfaction",
+                            "key": "customfield_10033",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "priority": {
+                            "required": false,
+                            "schema": {
+                              "type": "priority",
+                              "system": "priority"
+                            },
+                            "name": "Priority",
+                            "key": "priority",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/1",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/highest.svg",
+                                "name": "Highest",
+                                "id": "1"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/2",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/high.svg",
+                                "name": "High",
+                                "id": "2"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                                "name": "Medium",
+                                "id": "3"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/4",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/low.svg",
+                                "name": "Low",
+                                "id": "4"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/5",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/lowest.svg",
+                                "name": "Lowest",
+                                "id": "5"
+                              }
+                            ],
+                            "defaultValue": {
+                              "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                              "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                              "name": "Medium",
+                              "id": "3"
+                            }
+                          },
+                          "customfield_10002": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "sd-customerorganization",
+                              "custom": "com.atlassian.servicedesk:sd-customer-organizations",
+                              "customId": 10002
+                            },
+                            "name": "Organizations",
+                            "key": "customfield_10002",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/organisations/project/10001/search?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10003": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+                              "customId": 10003
+                            },
+                            "name": "Approvers",
+                            "key": "customfield_10003",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_10003&showAvatar=true&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "labels": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "string",
+                              "system": "labels"
+                            },
+                            "name": "Labels",
+                            "key": "labels",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/labels/suggest?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10037": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-request-lang",
+                              "custom": "com.atlassian.servicedesk.servicedesk-lingo-integration-plugin:sd-request-language",
+                              "customId": 10037
+                            },
+                            "name": "Request language",
+                            "key": "customfield_10037",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "languageCode": "en",
+                                "displayName": "English"
+                              }
+                            ]
+                          },
+                          "timetracking": {
+                            "required": false,
+                            "schema": {
+                              "type": "timetracking",
+                              "system": "timetracking"
+                            },
+                            "name": "Time tracking",
+                            "key": "timetracking",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "edit"
+                            ]
+                          },
+                          "customfield_10038": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "group",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multigrouppicker",
+                              "customId": 10038
+                            },
+                            "name": "Approver groups",
+                            "key": "customfield_10038",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "attachment": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "attachment",
+                              "system": "attachment"
+                            },
+                            "name": "Attachment",
+                            "key": "attachment",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "copy"
+                            ]
+                          },
+                          "duedate": {
+                            "required": false,
+                            "schema": {
+                              "type": "date",
+                              "system": "duedate"
+                            },
+                            "name": "Due date",
+                            "key": "duedate",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuelinks": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "issuelinks",
+                              "system": "issuelinks"
+                            },
+                            "name": "Linked Issues",
+                            "key": "issuelinks",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "copy"
+                            ]
+                          },
+                          "assignee": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "assignee"
+                            },
+                            "name": "Assignee",
+                            "key": "assignee",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/assignable/search?project=DEMO&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10008",
+                        "id": "10008",
+                        "description": "The sub-task of the issue",
+                        "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10571?size=medium",
+                        "name": "Sub-task",
+                        "untranslatedName": "Sub-task",
+                        "subtask": true,
+                        "hierarchyLevel": -1,
+                        "expand": "fields",
+                        "fields": {
+                          "summary": {
+                            "required": true,
+                            "schema": {
+                              "type": "string",
+                              "system": "summary"
+                            },
+                            "name": "Summary",
+                            "key": "summary",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuetype": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuetype",
+                              "system": "issuetype"
+                            },
+                            "name": "Issue Type",
+                            "key": "issuetype",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10008",
+                                "id": "10008",
+                                "description": "The sub-task of the issue",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10571?size=medium",
+                                "name": "Sub-task",
+                                "subtask": true,
+                                "avatarId": 10571,
+                                "hierarchyLevel": -1
+                              }
+                            ]
+                          },
+                          "parent": {
+                            "required": true,
+                            "schema": {
+                              "type": "issuelink",
+                              "system": "parent"
+                            },
+                            "name": "Parent",
+                            "key": "parent",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "components": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "component",
+                              "system": "components"
+                            },
+                            "name": "Components",
+                            "key": "components",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10001",
+                                "id": "10001",
+                                "name": "Intranet",
+                                "description": "Issues related to the intranet. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10000",
+                                "id": "10000",
+                                "name": "Jira",
+                                "description": "Issues related to Jira. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10002",
+                                "id": "10002",
+                                "name": "Public website",
+                                "description": "Issues related to the public website. Created by Jira Service Management."
+                              }
+                            ]
+                          },
+                          "description": {
+                            "required": false,
+                            "schema": {
+                              "type": "string",
+                              "system": "description"
+                            },
+                            "name": "Description",
+                            "key": "description",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "project": {
+                            "required": true,
+                            "schema": {
+                              "type": "project",
+                              "system": "project"
+                            },
+                            "name": "Project",
+                            "key": "project",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/project/10001",
+                                "id": "10001",
+                                "key": "DEMO",
+                                "name": "Demo service project",
+                                "projectTypeKey": "service_desk",
+                                "simplified": false,
+                                "avatarUrls": {
+                                  "48x48": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403",
+                                  "24x24": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=small",
+                                  "16x16": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=xsmall",
+                                  "32x32": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=medium"
+                                }
+                              }
+                            ]
+                          },
+                          "reporter": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "reporter"
+                            },
+                            "name": "Reporter",
+                            "key": "reporter",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/search?query=",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10010": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-customerrequesttype",
+                              "custom": "com.atlassian.servicedesk:vp-origin",
+                              "customId": 10010
+                            },
+                            "name": "Request Type",
+                            "key": "customfield_10010",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10032": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.servicedesk:sd-request-participants",
+                              "customId": 10032
+                            },
+                            "name": "Request participants",
+                            "key": "customfield_10032",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/servicedesk/sd-user-search/participants?issueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10033": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-feedback",
+                              "custom": "com.atlassian.servicedesk:sd-request-feedback",
+                              "customId": 10033
+                            },
+                            "name": "Satisfaction",
+                            "key": "customfield_10033",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "priority": {
+                            "required": false,
+                            "schema": {
+                              "type": "priority",
+                              "system": "priority"
+                            },
+                            "name": "Priority",
+                            "key": "priority",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/1",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/highest.svg",
+                                "name": "Highest",
+                                "id": "1"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/2",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/high.svg",
+                                "name": "High",
+                                "id": "2"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                                "name": "Medium",
+                                "id": "3"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/4",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/low.svg",
+                                "name": "Low",
+                                "id": "4"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/5",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/lowest.svg",
+                                "name": "Lowest",
+                                "id": "5"
+                              }
+                            ],
+                            "defaultValue": {
+                              "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                              "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                              "name": "Medium",
+                              "id": "3"
+                            }
+                          },
+                          "customfield_10002": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "sd-customerorganization",
+                              "custom": "com.atlassian.servicedesk:sd-customer-organizations",
+                              "customId": 10002
+                            },
+                            "name": "Organizations",
+                            "key": "customfield_10002",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/organisations/project/10001/search?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10003": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+                              "customId": 10003
+                            },
+                            "name": "Approvers",
+                            "key": "customfield_10003",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_10003&showAvatar=true&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "labels": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "string",
+                              "system": "labels"
+                            },
+                            "name": "Labels",
+                            "key": "labels",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/labels/suggest?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10037": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-request-lang",
+                              "custom": "com.atlassian.servicedesk.servicedesk-lingo-integration-plugin:sd-request-language",
+                              "customId": 10037
+                            },
+                            "name": "Request language",
+                            "key": "customfield_10037",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "languageCode": "en",
+                                "displayName": "English"
+                              }
+                            ]
+                          },
+                          "timetracking": {
+                            "required": false,
+                            "schema": {
+                              "type": "timetracking",
+                              "system": "timetracking"
+                            },
+                            "name": "Time tracking",
+                            "key": "timetracking",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "edit"
+                            ]
+                          },
+                          "customfield_10038": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "group",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multigrouppicker",
+                              "customId": 10038
+                            },
+                            "name": "Approver groups",
+                            "key": "customfield_10038",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "attachment": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "attachment",
+                              "system": "attachment"
+                            },
+                            "name": "Attachment",
+                            "key": "attachment",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "copy"
+                            ]
+                          },
+                          "duedate": {
+                            "required": false,
+                            "schema": {
+                              "type": "date",
+                              "system": "duedate"
+                            },
+                            "name": "Due date",
+                            "key": "duedate",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuelinks": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "issuelinks",
+                              "system": "issuelinks"
+                            },
+                            "name": "Linked Issues",
+                            "key": "issuelinks",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "copy"
+                            ]
+                          },
+                          "assignee": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "assignee"
+                            },
+                            "name": "Assignee",
+                            "key": "assignee",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/assignable/search?project=DEMO&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10006",
+                        "id": "10006",
+                        "description": "A requests that may require approval.",
+                        "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10569?size=medium",
+                        "name": "Service Request with Approvals",
+                        "untranslatedName": "Service Request with Approvals",
+                        "subtask": false,
+                        "hierarchyLevel": 0,
+                        "expand": "fields",
+                        "fields": {
+                          "summary": {
+                            "required": true,
+                            "schema": {
+                              "type": "string",
+                              "system": "summary"
+                            },
+                            "name": "Summary",
+                            "key": "summary",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuetype": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuetype",
+                              "system": "issuetype"
+                            },
+                            "name": "Issue Type",
+                            "key": "issuetype",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/issuetype/10006",
+                                "id": "10006",
+                                "description": "A requests that may require approval.",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10569?size=medium",
+                                "name": "Service Request with Approvals",
+                                "subtask": false,
+                                "avatarId": 10569,
+                                "hierarchyLevel": 0
+                              }
+                            ]
+                          },
+                          "parent": {
+                            "required": false,
+                            "schema": {
+                              "type": "issuelink",
+                              "system": "parent"
+                            },
+                            "name": "Parent",
+                            "key": "parent",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "components": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "component",
+                              "system": "components"
+                            },
+                            "name": "Components",
+                            "key": "components",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10001",
+                                "id": "10001",
+                                "name": "Intranet",
+                                "description": "Issues related to the intranet. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10000",
+                                "id": "10000",
+                                "name": "Jira",
+                                "description": "Issues related to Jira. Created by Jira Service Management."
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/component/10002",
+                                "id": "10002",
+                                "name": "Public website",
+                                "description": "Issues related to the public website. Created by Jira Service Management."
+                              }
+                            ]
+                          },
+                          "description": {
+                            "required": false,
+                            "schema": {
+                              "type": "string",
+                              "system": "description"
+                            },
+                            "name": "Description",
+                            "key": "description",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "project": {
+                            "required": true,
+                            "schema": {
+                              "type": "project",
+                              "system": "project"
+                            },
+                            "name": "Project",
+                            "key": "project",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/project/10001",
+                                "id": "10001",
+                                "key": "DEMO",
+                                "name": "Demo service project",
+                                "projectTypeKey": "service_desk",
+                                "simplified": false,
+                                "avatarUrls": {
+                                  "48x48": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403",
+                                  "24x24": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=small",
+                                  "16x16": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=xsmall",
+                                  "32x32": "https://venkat-padigapati.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10403?size=medium"
+                                }
+                              }
+                            ]
+                          },
+                          "reporter": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "reporter"
+                            },
+                            "name": "Reporter",
+                            "key": "reporter",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/search?query=",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10010": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-customerrequesttype",
+                              "custom": "com.atlassian.servicedesk:vp-origin",
+                              "customId": 10010
+                            },
+                            "name": "Request Type",
+                            "key": "customfield_10010",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "customfield_10032": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.servicedesk:sd-request-participants",
+                              "customId": 10032
+                            },
+                            "name": "Request participants",
+                            "key": "customfield_10032",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/servicedesk/sd-user-search/participants?issueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10033": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-feedback",
+                              "custom": "com.atlassian.servicedesk:sd-request-feedback",
+                              "customId": 10033
+                            },
+                            "name": "Satisfaction",
+                            "key": "customfield_10033",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "priority": {
+                            "required": false,
+                            "schema": {
+                              "type": "priority",
+                              "system": "priority"
+                            },
+                            "name": "Priority",
+                            "key": "priority",
+                            "hasDefaultValue": true,
+                            "operations": [
+                              "set"
+                            ],
+                            "allowedValues": [
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/1",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/highest.svg",
+                                "name": "Highest",
+                                "id": "1"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/2",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/high.svg",
+                                "name": "High",
+                                "id": "2"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                                "name": "Medium",
+                                "id": "3"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/4",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/low.svg",
+                                "name": "Low",
+                                "id": "4"
+                              },
+                              {
+                                "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/5",
+                                "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/lowest.svg",
+                                "name": "Lowest",
+                                "id": "5"
+                              }
+                            ],
+                            "defaultValue": {
+                              "self": "https://venkat-padigapati.atlassian.net/rest/api/2/priority/3",
+                              "iconUrl": "https://venkat-padigapati.atlassian.net/images/icons/priorities/medium.svg",
+                              "name": "Medium",
+                              "id": "3"
+                            }
+                          },
+                          "customfield_10002": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "sd-customerorganization",
+                              "custom": "com.atlassian.servicedesk:sd-customer-organizations",
+                              "customId": 10002
+                            },
+                            "name": "Organizations",
+                            "key": "customfield_10002",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/servicedesk/1/organisations/project/10001/search?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10003": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "user",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+                              "customId": 10003
+                            },
+                            "name": "Approvers",
+                            "key": "customfield_10003",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_10003&showAvatar=true&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "labels": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "string",
+                              "system": "labels"
+                            },
+                            "name": "Labels",
+                            "key": "labels",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/1.0/labels/suggest?query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "customfield_10037": {
+                            "required": false,
+                            "schema": {
+                              "type": "sd-request-lang",
+                              "custom": "com.atlassian.servicedesk.servicedesk-lingo-integration-plugin:sd-request-language",
+                              "customId": 10037
+                            },
+                            "name": "Request language",
+                            "key": "customfield_10037",
+                            "hasDefaultValue": false,
+                            "operations": [],
+                            "allowedValues": [
+                              {
+                                "languageCode": "en",
+                                "displayName": "English"
+                              }
+                            ]
+                          },
+                          "timetracking": {
+                            "required": false,
+                            "schema": {
+                              "type": "timetracking",
+                              "system": "timetracking"
+                            },
+                            "name": "Time tracking",
+                            "key": "timetracking",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "edit"
+                            ]
+                          },
+                          "customfield_10038": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "group",
+                              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multigrouppicker",
+                              "customId": 10038
+                            },
+                            "name": "Approver groups",
+                            "key": "customfield_10038",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "set",
+                              "remove"
+                            ]
+                          },
+                          "attachment": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "attachment",
+                              "system": "attachment"
+                            },
+                            "name": "Attachment",
+                            "key": "attachment",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set",
+                              "copy"
+                            ]
+                          },
+                          "duedate": {
+                            "required": false,
+                            "schema": {
+                              "type": "date",
+                              "system": "duedate"
+                            },
+                            "name": "Due date",
+                            "key": "duedate",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          },
+                          "issuelinks": {
+                            "required": false,
+                            "schema": {
+                              "type": "array",
+                              "items": "issuelinks",
+                              "system": "issuelinks"
+                            },
+                            "name": "Linked Issues",
+                            "key": "issuelinks",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "add",
+                              "copy"
+                            ]
+                          },
+                          "assignee": {
+                            "required": false,
+                            "schema": {
+                              "type": "user",
+                              "system": "assignee"
+                            },
+                            "name": "Assignee",
+                            "key": "assignee",
+                            "autoCompleteUrl": "https://venkat-padigapati.atlassian.net/rest/api/2/user/assignable/search?project=DEMO&query=",
+                            "hasDefaultValue": false,
+                            "operations": [
+                              "set"
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              };
+              console.log(res);
