@@ -1,194 +1,94 @@
-## **Project: GitHub Copilot and Data Loss Prevention (DLP) Report Automation**
+# Atlassian for VS Code
 
-### **Overview**
+Atlassian for VS Code brings the functionality of Atlassian products to your favorite IDE!
 
-In our project, customer data security is paramount. We use GitHub Copilot to enhance developer productivity, but it comes with potential risks related to the exposure of sensitive data, such as customer information and connection strings. The DLP (Data Loss Prevention) team monitors these risks and provides weekly reports on potential exposures.
+This extension combines the power of Jira and Bitbucket to streamline the developer workflow within VS Code.
 
-This document outlines the system design for automatically processing DLP reports related to GitHub Copilot usage, logging infractions, notifying affected users, and tracking repeat offenders. The system is built using Spring Boot, MongoDB, and a custom email notification service.
+With Atlassian for VS Code you can create and view issues, start work on issues, create pull requests, do code reviews, start builds, get build statuses and more!
 
-### **Action Plan**
+**Note:** 'Atlassian for VS Code' is published as an Atlassian Labs project.
+Although you may find unique and highly useful functionality in the Atlassian Labs apps, Atlassian takes no responsibility for your use of these apps.
 
-Our team receives weekly DLP reports that monitor and flag any activities where sensitive data might have been exposed while using Copilot. Based on these reports, we need to take the following actions:
+## Getting Started
 
-1. **DLP Report Ingestion**: 
-   - Upon receiving a DLP report, the system parses it and identifies infractions.
-   - Each infraction is saved into the MongoDB database.
-   - Users who are flagged in the report are notified via email.
+-   Make sure you have VS Code version 1.40.0 or above
+-   Download the extension from the marketplace
+-   Authenticate with Jira and/or Bitbucket from the 'Atlassian: Open Settings' page available in the command palette
+-   From the command palette, type 'Atlassian:' to see all of the extensions available commands
 
-2. **Infraction Tracking**: 
-   - The system tracks all infractions for each employee and monitors trends such as repeat offenses over time.
+For more information, see [Getting started with VS Code](https://confluence.atlassian.com/display/BITBUCKET/Getting+started+with+VS+Code) and the related content.
 
-3. **Email Notifications**: 
-   - Users are notified if their activities have exposed sensitive data via GitHub Copilot.
-   - Repeated offenders are escalated for further action, including mandatory training.
+**Note:** Jira Service Desk projects are not fully supported at this time.
 
-### **DLP Report Details**
+## Features at a Glance
 
-We receive the following data in the DLP report:
+Here's a quick peek at a developer's workflow:
 
-- **Columns**: `Protocol`, `Date`, `ID`, `Sender`, `Subject`, `Recipient`, `Policy`, `Matches`, `Severity`, `Status`
-- **Relevant Columns**:
-  - **Date**: Date and time when the activity occurred.
-  - **Sender**: Employee or user responsible for the activity (employee ID).
-  - **Severity**: The level of severity (`Low`, `Info`), used to assess the seriousness of the exposure.
-  - **Status**: Status of the flagged event (`No Further Action`, `Business - Not Reviewed`, `False Positive`, `Action Required`).
+![dev workflow](https://bitbucket.org/atlassianlabs/atlascode/raw/main/.readme/dev-workflow.gif)
 
-### **Design Proposal for Automation**
+Reviewing with Bitbucket pull request features is a snap:
 
-The high-level workflow will be as follows:
+![review pr](https://bitbucket.org/atlassianlabs/atlascode/raw/main/.readme/review-pr.gif)
 
-1. **Receive and Parse Report**: 
-   - The DLP report will be uploaded via an API endpoint.
+Got a burning issue you'd like to work on?
 
-2. **Data Filtering and Storage**: 
-   - The report will be processed to extract relevant records based on the following criteria:
-     - Records with `Status` values of 'Action Required' and ‘Business - Not Reviewed’ will be saved to MongoDB.
-     - `Sender` values will be parsed to extract the employee ID (e.g., `U801568` from `WinNT://AD-ENT/U801568`).
-     - If the `Sender` is an IP address (e.g., `10.46.37.567`), further investigation will be required, as the user cannot be determined.
+![start work](https://bitbucket.org/atlassianlabs/atlascode/raw/main/.readme/issue-start-work.gif)
 
-3. **Email Notification**: 
-   - For each user, an email will be sent explaining that sensitive data was exposed during Copilot use and advising them to avoid doing so in the future.
-   - The email will include a link to documentation on best practices for using GitHub Copilot safely.
+Kick off your builds:
 
-4. **Track Repeat Offenders**: 
-   - MongoDB will store data on user offenses.
-   - If a user repeatedly exposes sensitive data, an email will be triggered to our internal team at `abc@def.com` for corrective action.
+![builds](https://bitbucket.org/atlassianlabs/atlascode/raw/main/.readme/start-pipeline.gif)
 
-### **1. API Design for Report Processing of DLP Reports and Notifications**
+Create that issue without breaking your stride:
 
-#### **1.1 Report Upload API**
+![issue from todo](https://bitbucket.org/atlassianlabs/atlascode/raw/main/.readme/create-from-code-lens.gif)
 
-- **Endpoint**: `/uploadReport`
-- **Input**: CSV or XLSX file containing the weekly DLP report.
-- **Processing**:
-  - Parse the report and extract relevant fields (e.g., Date, Sender, Severity, Status).
-  - For each row:
-    - Extract `empId` from the Sender field.
-    - Check if the Status is either "Action Required" or "Business - Not Reviewed."
-    - Store the data in MongoDB if it meets the criteria.
-- **Output**: HTTP 200 OK response once data is successfully processed.
+...and lots more
 
-#### **1.2 Storing in MongoDB**
+## Everyone Has Issues...
 
-We store relevant infraction data to allow tracking of both single incidents and repeated offenses.
+Please refer to [our issue tracker for known issues](https://bitbucket.org/atlassianlabs/atlascode/issues) and please contribute if you encounter an issue yourself.
 
-**Schema**:
-```java
-@Document(collection = "github-copilot-dlp-infraction-logs")
-public class GitHubCopilotDLPInfractionLog {
+**Note for Server/Data Center users:** The extension supports Jira and Bitbucket versions released in the last two years, per our [end of life policy](https://confluence.atlassian.com/x/ewAID).
+You can find your instance's version in the footer of any Jira/Bitbucket page.
 
-    @Id
-    private String id;
-    private String employeeId;
-    private String email;
-    private List<InfractionRecord> infractionRecords = new ArrayList<>();
-    private int totalInfractionCount;   // Total number of infractions recorded
-    private LocalDateTime lastInfractionDate;  // Date of the most recent infraction
-    private boolean flaggedForReview;  // Indicates whether the user has been flagged for further action
-}
+### Questions? Comments? Kudos?
 
-public class InfractionRecord {
+Please use the in-app feedback form to tell us what you think! It's available from the 'Atlassian: Open Settings' and 'Atlassian: Open Welcome' pages available in the command palette.
 
-    private LocalDateTime infractionDate;
-    private String severity;
-    private String status;
-}
-```
+## Contributors
 
-**Sample MongoDB Document**:
-```json
-{
-    "_id": "607c191e810c19729de860ea",
-    "employeeId": "U801568",
-    "email": "john.doe@example.com",
-    "infractionRecords": [
-        {
-            "infractionDate": "2024-09-01T12:00:00Z",
-            "severity": "High",
-            "status": "Action Required"
-        },
-        {
-            "infractionDate": "2024-09-05T15:00:00Z",
-            "severity": "Medium",
-            "status": "Business - Not Reviewed"
-        }
-    ],
-    "totalInfractionCount": 2,
-    "lastInfractionDate": "2024-09-05T15:00:00Z",
-    "flaggedForReview": true
-}
-```
+Pull requests, issues and comments welcome.
 
-**Key Fields**:
-- **employeeId**: The ID of the employee who committed the infraction.
-- **email**: User email fetched using internal API (getEmpInfo/{empId}).
-- **infractionRecords**: A list of individual infraction events, including details such as the date, severity, and status.
-- **totalInfractionCount**: The total number of infractions recorded for this employee.
-- **lastInfractionDate**: The date of the most recent infraction.
-- **flaggedForReview**: A boolean flag to indicate whether the user has exceeded the infraction threshold and should be flagged for further review.
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-#### **1.3 Email Notification System**
+Running and debugging the extension:
 
-Once the report is processed and saved, the system triggers an email notification to the users involved in data exposure.
+-   Atlassian for VS Code is a node project, as such you'll need to run `npm install` before building.
+-   To debug the extension from within VS Code you'll need a `launch.json`.
+    ** An example `launch.json` that will be suitable for most users is included as `.vscode/launch.json.example`.
+    ** To use the example file simply copy it to `launch.json`.
+-   Once you have a `launch.json` file select "Debug and Run" from the Activity Bar and click "Start Debugging".
+    \*\* After the extension builds VS Code will launch a new instance of itself (the Extension Development Host) running the extension.
+-   When you want to test your code changes
+    ** If the extension development host is still running restart by clicking ⟲ in the debug toolbar.
+    ** If you've already stopped the host just start debugging again.
 
-**Template: Email to Users**
+For pull requests:
 
-### **2. Spring Boot Scheduler for Aggregation**
+-   Follow the existing style
+-   Separate unrelated changes into multiple pull requests
+-   Pull requests should target the `external-contributions` branch
 
-The scheduler runs weekly to check for users who have exceeded the infraction threshold. It flags these users and sends an email listing all the flagged users' IDs to our team for immediate action.
+Atlassian requires contributors to sign a Contributor License Agreement,
+known as a CLA. This serves as a record stating that the contributor is
+entitled to contribute the code/documentation/translation to the project
+and is willing to have it used in distributions and derivative works
+(or is willing to transfer ownership).
 
-**Email Template: Escalation Email to Internal Team**
+Prior to accepting your contributions we ask that you please follow the appropriate
+link below to digitally sign the CLA. The Corporate CLA is for those who are
+contributing as a member of an organization and the individual CLA is for
+those contributing as an individual.
 
-### **3. Email Content and Template**
-
-- **Email to Users**:
-  - **Subject**: "Important: Sensitive Data Exposure Detected"
-  - **Body**:
-    ```
-    Dear [User],
-
-    Our monitoring system detected that sensitive data was exposed while using GitHub Copilot on [Date].
-
-    To ensure the protection of our customer data and compliance with internal security policies, it is mandatory that you review our documentation on how to use GitHub Copilot safely. Please avoid using Copilot when files containing customer information or sensitive data are open.
-
-    You are required to read the documentation available here: [Link to Documentation].
-
-    Thank you for your immediate attention to this matter.
-
-    Best regards,
-    [Your Team Name]
-    ```
-
-- **Escalation Email to Internal Team**:
-  - **Subject**: "Alert: Repeated Exposure of Sensitive Data Detected"
-  - **Body**:
-    ```
-    Hi Team,
-
-    Our system has detected that several users have met or exceeded the threshold for sensitive data exposure to GitHub Copilot. The affected users are listed below: [Users].
-
-    Please review these incidents and implement the necessary corrective measures.
-
-    Thank you for your attention to this matter.
-
-    Best regards,
-    [Your Team Name]
-    ```
-
-### **Considerations and Next Steps**
-
-1. **Handling IP Address in Reports**:
-   - In some cases, the `Sender` field in the report may contain an IP address instead of a user ID, making it difficult to determine the responsible employee. We will flag these instances and suggest working with the DLP team for further investigation.
-
-2. **Severity Levels**:
-   - The DLP reports currently categorize severity as either `Low` or `Info`. If additional severity levels are introduced in the future, we will collaborate with the DLP team to adjust the handling and notification process accordingly.
-
-3. **Training Material**:
-   - We are preparing mandatory training material on our internal LMS portal. Once the training is available, all users who repeatedly expose sensitive data will be required to complete the training.
-
-4. **Documentation Link**:
-   - Ensure the documentation on using GitHub Copilot safely is up to date and available via the link included in the emails.
-
-### **Conclusion**
-
-By automating the process of handling DLP reports and notifying users of sensitive data exposure, we aim to enhance data security and ensure compliance with our internal policies. The outlined system will help us track and manage Copilot usage effectively, providing timely feedback to users and reducing the risk of future exposures.
+-   [CLA for corporate contributors](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=e1c17c66-ca4d-4aab-a953-2c231af4a20b)
+-   [CLA for individuals](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=3f94fbdc-2fbe-46ac-b14c-5d152700ae5d)
